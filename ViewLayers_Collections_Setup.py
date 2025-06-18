@@ -49,6 +49,7 @@ def SetCollectionInvisible(viewLayerName, collectionName):
     bpy.context.scene.view_layers[viewLayerName].layer_collection.children[collectionName].exclude = True
         
 bpy.context.scene.render.engine = 'CYCLES'
+bpy.context.scene.render.film_transparent = True
 outliner_area = next(a for a in bpy.context.screen.areas if a.type == "OUTLINER")
 
 space = outliner_area.spaces[0]
